@@ -79,7 +79,7 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
                 FILE *miris;
                 char filenya[1000];
                 sprintf(filenya, "%s/filemiris.txt", fpath);
-                sprintf(hasil, "\nNama:%s, Owner:%s, Group:%s, Atime:%04d-%02d-%02d_%02d:%02d:%02d\n",de->d_name, pw->pw_name, gr->gr_name, jam->tm_year+1900, jam->tm_mon+1, jam->tm_mday, jam->tm_hour, jam->tm_min, jam->tm_sec);
+                sprintf(hasil, "\nNama:%s, Owner:%d, Group:%d, Atime:%04d-%02d-%02d_%02d:%02d:%02d\n",de->d_name, sb.st_uid, sb.st_gid, jam->tm_year+1900, jam->tm_mon+1, jam->tm_mday, jam->tm_hour, jam->tm_min, jam->tm_sec);
                 miris=fopen(filenya, "a");
                 fputs(hasil, miris);
                 fclose(miris);
@@ -222,6 +222,7 @@ static int xmp_utimens(const char *path, const struct timespec ts[2])
 	if (res == -1)
 		return -errno;
 
+	
 	return 0;
 }
 
@@ -284,7 +285,7 @@ static int xmp_chmod(const char *path, mode_t mode)
 	ext=strrchr(fpath, '.');
 	
 	char *p;
-	p = strstr(fpath, "YOUTUBER");
+	p = strstr(fpath, "/YOUTUBER/");
 
 	if(p)
 	{
