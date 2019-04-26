@@ -15,7 +15,7 @@ Perhatian: Karakter ‘/’ adalah karakter ilegal dalam penamaan file atau fold
 
 ## Kendala yang Dialami
 
-Kami tidak tahu bagaimana caranya enkrip dan dekrip nama filenya
+Kami kekurangan waktu untuk enkrip dan dekrip nama filenya
 
 ## No 2
 Semua file video yang tersimpan secara terpecah-pecah (splitted) harus secara otomatis tergabung (joined) dan diletakkan dalam folder “Videos”
@@ -41,7 +41,7 @@ Urutan operasi dari kebutuhan ini adalah:
   - Hapus folder “Videos” 
 
 ## Kendala yang Dialami
-Kami tidak paham
+Kami masih belum menemukan solusi untuk nomor 2
 
 ## No 3
 Sebelum diterapkannya file system ini, Atta pernah diserang oleh hacker LAPTOP_RUSAK yang menanamkan user bernama “chipset” dan “ic_controller” serta group “rusak” yang tidak bisa dihapus. Karena paranoid, Atta menerapkan aturan pada file system ini untuk menghapus “file bahaya” yang memiliki spesifikasi:
